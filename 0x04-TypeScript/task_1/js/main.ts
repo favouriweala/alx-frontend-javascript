@@ -46,3 +46,36 @@ console.log(director1);
 // usage of printTeacher function
 console.log(printTeacher({ firstName: 'John', lastName: 'Doe' })); 
 
+
+// write a class
+class studentClass{
+  firstNaame: string;
+  lastName: string;
+}
+
+interface StudentConstructor {
+  new (firstName: string, lastName: string): StudentClass;
+}
+
+interface StudentClass {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+class StudentClass {
+  firstName: string;
+  lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
